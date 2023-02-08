@@ -1,0 +1,5 @@
+name: my-github-user/my-query-tests
+dependencies:
+  my-github-user/my-custom-queries: ^1.2.3
+extractor: java
+tests: .
