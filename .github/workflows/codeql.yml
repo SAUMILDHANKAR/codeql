@@ -13,10 +13,10 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "forcodeqlv5", merge-conflict-1, merge-conflict-2 ]
+    branches: [ "testingquery", merge-conflict-1, merge-conflict-2 ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "forcodeqlv5" ]
+    branches: [ "testingquery" ]
   schedule:
     - cron: '31 21 * * 6'
 
