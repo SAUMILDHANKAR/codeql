@@ -1,0 +1,36 @@
+name: "My CodeQL config"
+
+disable-default-queries: true
+
+#queries: github/codeql/javascript/ql/src/Security/CWE-094/ExpressionInjection.ql@main
+#queries: github/codeql/javascript/ql/src/Security/CWE-079/XssThroughDom.ql@main
+#queries: SAUMILDHANKAR/codeql/java/ql/custom-queries/java/tests/EmptyThen@testingquery
+#queries: SAUMILDHANKAR/codeql/java/ql/custom-queries/java/queries/EmptyThen.ql@testingquery
+#queries: SAUMILDHANKAR/codeql/java/ql/src/Security/CWE/CWE-074/JndiInjection.ql@testingquery
+#queries: SAUMILDHANKAR/codeql/javascript/ql/src/Security/CWE-830/FunctionalityFromUntrustedSource.ql@main
+queries: SAUMILDHANKAR/codeql/javascript/ql/src/Security/CWE-830/FunctionalityFromUntrustedSource.ql@testingquery
+ 
+#queries: SAUMILDHANKAR/codeql/java/ql/custom-queries/java/tests/EmptyThen/Test.java@testingquery
+#queries: SAUMILDHANKAR/codeql/java/ql/custom-queries/java/tests/EmptyThen/EmptyThen.qlref@testingquery
+
+#queries:
+  #- uses: ./my-basic-queries/example-query.ql
+  #- uses: SAUMILDHANKAR/codeql/java/ql/custom-queries/java/tests/EmptyThen
+  #- uses: SAUMILDHANKAR/codeql/java/ql/custom-queries/java/tests/EmptyThen@testingquery
+#packs:
+  #- SAUMILDHANKAR/codeql/java/ql/custom-queries/java/tests/EmptyThen@testingquery
+#queries:
+  #- name: Use an external repo query
+    #uses: SAUMILDHANKAR/codeql/java/ql/custom-queries/java/tests/EmptyThen@testingquery
+
+#queries: 
+  #- name: codeql/javascript-queries
+    #uses: ./.github/workflows/javascriptqlpack.yml
+  #- name: custom
+    #uses: ./.github/workflows/FunctionalityFromUntrustedSource.ql
+
+
+#./.github/workflows/codeql-config.yml
+#Security/CWE-079/XssThroughDom.ql
+  #- name: Use an in-repository QL pack (run queries in the my-queries directory)
+    #uses: ./my-queries
