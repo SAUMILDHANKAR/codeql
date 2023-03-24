@@ -1,3 +1,15 @@
+/**
+ * @name yaml library test
+ * @description best practice for yaml files.
+ * @kind problem
+ * @problem.severity recommendation
+ * @id js/yaml-lib-test
+ * @tags maintainability
+ *       statistical
+ *       non-attributable
+ * @precision high
+ */
+
 import javascript
 
 query predicate anchors(YamlNode n, string anchor) { n.getAnchor() = anchor }
