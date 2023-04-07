@@ -9,13 +9,14 @@
  *       external/cwe/cwe-546
  * @precision medium
  */
-/**
+
 import javascript
 
 from Comment c
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
- */
+ 
+/** 
 import javascript
 
 class CommaToken extends PunctuatorToken {
@@ -27,3 +28,4 @@ class CommaToken extends PunctuatorToken {
 from CommaToken comma
 where comma.getNextToken() instanceof CommaToken
 select comma, "Omitted array elements are bad style."
+*/
