@@ -39,7 +39,7 @@ predicate hasStandardTypeTag(string t) {
   }
 */
   
-from hasStandardTypeTag(string t)
+from hasStandardTypeTag t
 where t.getTag().regexpCapture("tag:yaml.org,2002:(.*)", 1)
 select t, "FUTUREBUG comments should be addressed."
 /**
