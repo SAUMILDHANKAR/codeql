@@ -34,6 +34,6 @@ select comma, "Omitted array elements are bad style."
 import javascript
 import semmle.javascript.YAML
 
-from YAMLnode c
+from YamlNode c
 where c.eval().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
