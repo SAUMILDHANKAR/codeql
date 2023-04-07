@@ -39,9 +39,9 @@ predicate hasStandardTypeTag(string t) {
   }
 */
   
-from hasStandardTypeTag ::
-where ::.getTag().regexpCapture("tag:yaml.org,2002:(.*)", 1)
-select ::, "FUTUREBUG comments should be addressed."
+from hasStandardTypeTag string t
+where string t.getTag().regexpCapture("tag:yaml.org,2002:(.*)", 1)
+select string t, "FUTUREBUG comments should be addressed."
 /**
 from YamlNode c
 where c.eval().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
