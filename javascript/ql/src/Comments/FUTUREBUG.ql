@@ -9,14 +9,14 @@
  *       external/cwe/cwe-546
  * @precision medium
  */
-/** 
+ 
 import javascript
 
 from Comment c
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 
-
+/**
 import javascript
 
 class CommaToken extends PunctuatorToken {
@@ -30,19 +30,20 @@ where comma.getNextToken() instanceof CommaToken
 select comma, "Omitted array elements are bad style."
 */
 
-
+/**
 import javascript
 import semmle.javascript.YAML
-/**
+
 predicate hasStandardTypeTag(string t) {
     t = this.getTag().regexpCapture("tag:yaml.org,2002:(.*)", 1)
   }
 */
-  
+
+/**
 from hasStandardTypeTag string t
 where string t.getTag().regexpCapture("tag:yaml.org,2002:(.*)", 1)
 select string t, "FUTUREBUG comments should be addressed."
-/**
+
 from YamlNode c
 where c.eval().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
