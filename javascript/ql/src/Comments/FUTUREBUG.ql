@@ -53,8 +53,8 @@ select c, "FUTUREBUG comments should be addressed."
 import javascript
 import semmle.javascript.Regexp
 
-from RegExpSequence z
-where z.getElement().regexpMatch("(?s).*FIXME.*|.*TOYAMLDO.*|.*(?<!=)\\s*XXX.*")
+from RegExpTerm z
+where z.isPartOfRegExpLiteral().regexpMatch("(?s).*FIXME.*|.*TOYAMLDO.*|.*(?<!=)\\s*XXX.*")
 select z, "TOYAMLDO comments should be addressed."
 
 
