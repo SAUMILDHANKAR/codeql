@@ -39,4 +39,5 @@ query predicate yamlScalar(YamlScalar s, string style, string value) {
 */
 
 from yamlParseError err
+where err.getText().any()
 select err, "this should be fixed"
