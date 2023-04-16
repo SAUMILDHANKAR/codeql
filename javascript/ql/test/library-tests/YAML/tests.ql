@@ -14,6 +14,7 @@ import javascript
 import semmle.javascript.PrintAst
 import semmle.javascript.YAML
 
+/**
 query predicate anchors(YamlNode n, string anchor) { n.getAnchor() = anchor }
 
 query predicate eval(YamlNode n, YamlValue eval) {
@@ -34,3 +35,8 @@ query predicate yamlNode(YamlNode n, string tag) { tag = n.getTag() }
 query predicate yamlScalar(YamlScalar s, string style, string value) {
   style = s.getStyle() and value = s.getValue()
 }
+
+*/
+
+from yamlParseError err
+select err, "this should be fixed"
