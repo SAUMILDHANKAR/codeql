@@ -54,7 +54,7 @@ import javascript
 import semmle.javascript.Regexp
 
 from RegExpTerm z
-where z.isPartOfRegExpLiteral().regexpMatch("(?s).*FIXME.*|.*TOYAMLDO.*|.*(?<!=)\\s*XXX.*")
+where z.getLiteral().isUsedAsRegExp("/[a-z]+/g;")
 select z, "TOYAMLDO comments should be addressed."
 
 
