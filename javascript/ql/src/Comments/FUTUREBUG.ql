@@ -63,6 +63,6 @@ import javascript
 import semmle.javascript.YAML
 
 
-from YamlTimestamp d
-where d.getDateValue("2001-12-15T02:59:43.1Z")
+from YamlValue d
+where d.eval("2001-12-15T02:59:43.1Z")
 select d, "TOYAMLDO comments should be addressed."
