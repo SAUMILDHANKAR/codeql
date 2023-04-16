@@ -50,6 +50,8 @@ select e, "this should be fixed"
 */
 
 
-string yamlParseError(string e<48) {
+string yamlParseError(string e) {
+  console.log(e)
+  console.log(result)
   e = any(result)
 }
