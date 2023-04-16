@@ -9,14 +9,15 @@
  *       external/cwe/cwe-546
  * @precision medium
  */
- 
+
+/**
 import javascript
 
 from Comment c
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 
-/**
+
 import javascript
 
 class CommaToken extends PunctuatorToken {
@@ -48,3 +49,11 @@ from YamlNode c
 where c.eval().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 */
+
+import semmle.javascript.Regexp
+
+from RegExpSequence z
+where z.getElement().regexpMatch("(?s).*FIXME.*|.*TOYAMLDO.*|.*(?<!=)\\s*XXX.*")
+select z, "TOYAMLDO comments should be addressed."
+
+
