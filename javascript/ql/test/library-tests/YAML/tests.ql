@@ -11,7 +11,7 @@
  */
 
 import javascript
-import semmle.javascript.PrintAst
+//import semmle.javascript.PrintAst
 import semmle.javascript.YAML
 
 /**
@@ -40,6 +40,11 @@ query predicate yamlScalar(YamlScalar s, string style, string value) {
 from yamlParseError any err
 //where err.getText().any()
 select err, "this should be fixed"
-*/
 
 query predicate yamlParseError(YamlParseError err) { any() }
+
+*/
+
+from yamlParseError e
+where e.any()
+select e, "this should be fixed"
