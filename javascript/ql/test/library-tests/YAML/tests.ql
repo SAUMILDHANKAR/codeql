@@ -43,8 +43,13 @@ select err, "this should be fixed"
 
 query predicate yamlParseError(YamlParseError err) { any() }
 
-*/
 
 from yamlParseError e
 where e.any()
 select e, "this should be fixed"
+*/
+
+
+string yamlParseError(string e) {
+  e = any(result)
+}
