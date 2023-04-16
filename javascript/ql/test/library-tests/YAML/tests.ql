@@ -23,7 +23,7 @@ query predicate eval(YamlNode n, YamlValue eval) {
 
 query predicate yamlParseError(YamlParseError err) { any() }
 
-from yamlParseError d
+from yamlParseError string d
 select d, "this should be fixed"
 
 
