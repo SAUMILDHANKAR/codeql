@@ -50,6 +50,6 @@ select e, "this should be fixed"
 */
 
 
-string yamlParseError(string e) {
+string yamlParseError(string e<48) {
   e = any(result)
 }
