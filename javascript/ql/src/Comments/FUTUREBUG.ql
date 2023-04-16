@@ -50,6 +50,7 @@ where c.eval().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 */
 
+import javascript
 import semmle.javascript.Regexp
 
 from RegExpSequence z
