@@ -11,6 +11,8 @@
  */
 
 import javascript
+import semmle.javascript.PrintAst
+import semmle.javascript.YAML
 
 query predicate anchors(YamlNode n, string anchor) { n.getAnchor() = anchor }
 
