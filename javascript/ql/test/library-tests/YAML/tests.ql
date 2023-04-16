@@ -54,9 +54,13 @@ string yamlParseError(string e) {
   console.log(result)
   e = any(result)
 }
-*/
 
 int getSuccessor(int i) {
   result = i + 1 and
   i in [1 .. 9]
 }
+*/
+
+from string yamlParseError string err
+//where err.getText().any()
+select err, "this should be fixed"
