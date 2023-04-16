@@ -23,6 +23,10 @@ query predicate eval(YamlNode n, YamlValue eval) {
 
 query predicate yamlParseError(YamlParseError err) { any() }
 
+from yamlParseError d
+select d, "this should be fixed"
+
+
 query predicate yamlMapping_maps(YamlMapping m, YamlValue k, YamlValue v) { m.maps(k, v) }
 
 query predicate yamlNode(YamlNode n, string tag) { tag = n.getTag() }
