@@ -14,6 +14,9 @@ import javascript
 //import semmle.javascript.PrintAst
 import semmle.javascript.YAML
 
+
+query predicate yamlParseError(YamlParseError err) { any() }
+
 /**
 query predicate anchors(YamlNode n, string anchor) { n.getAnchor() = anchor }
 
@@ -61,6 +64,6 @@ int getSuccessor(int i) {
 }
 */
 
-from string yamlParseError err
+from string err
 //where err.getText().any()
 select err, "this should be fixed"
