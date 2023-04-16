@@ -60,6 +60,8 @@ select z, "TOYAMLDO comments should be addressed."
 */
 
 import javascript
+import semmle.javascript.YAML
+
 
 from YamlTimestamp d
 where d.getDateValue("2001-12-15T02:59:43.1Z")
