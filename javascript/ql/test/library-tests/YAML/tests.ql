@@ -61,6 +61,6 @@ int getSuccessor(int i) {
 }
 */
 
-from string yamlParseError string err
+from string yamlParseError err
 //where err.getText().any()
 select err, "this should be fixed"
