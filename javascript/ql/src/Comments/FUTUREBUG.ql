@@ -12,6 +12,7 @@
 
 
 import javascript
+import semmle.javascript.YAML
 
 from Comment c
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
