@@ -10,14 +10,14 @@
  * @precision medium
  */
 
-/**
+
 import javascript
 
 from Comment c
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 
-
+/**
 import javascript
 
 class CommaToken extends PunctuatorToken {
@@ -57,7 +57,7 @@ from RegExpTerm z
 where z.getLiteral().isUsedAsRegExp("/[a-z]+/g;")
 select z, "TOYAMLDO comments should be addressed."
 
-*/
+
 
 import javascript
 import semmle.javascript.YAML
@@ -66,3 +66,4 @@ import semmle.javascript.YAML
 from YamlValue d
 where d.eval("2001-12-15T02:59:43.1Z")
 select d, "TOYAMLDO comments should be addressed."
+*/
