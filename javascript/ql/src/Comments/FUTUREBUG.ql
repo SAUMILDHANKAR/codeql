@@ -48,7 +48,7 @@ select string t, "FUTUREBUG comments should be addressed."
 from YamlNode c
 where c.eval().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
-*/
+
 
 import javascript
 import semmle.javascript.Regexp
@@ -57,4 +57,10 @@ from RegExpTerm z
 where z.getLiteral().isUsedAsRegExp("/[a-z]+/g;")
 select z, "TOYAMLDO comments should be addressed."
 
+*/
 
+import javascript
+
+from YamlTimestamp d
+where d.getDateValue("2001-12-15T02:59:43.1Z")
+select d, "TOYAMLDO comments should be addressed."
