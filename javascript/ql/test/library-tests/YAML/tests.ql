@@ -47,11 +47,16 @@ query predicate yamlParseError(YamlParseError err) { any() }
 from yamlParseError e
 where e.any()
 select e, "this should be fixed"
-*/
 
 
 string yamlParseError(string e) {
   console.log(e)
   console.log(result)
   e = any(result)
+}
+*/
+
+int getSuccessor(int i) {
+  result = i + 1 and
+  i in [1 .. 9]
 }
