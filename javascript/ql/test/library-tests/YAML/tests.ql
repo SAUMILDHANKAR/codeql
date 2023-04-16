@@ -1,10 +1,10 @@
 /**
  * @name yaml library test
  * @description best practice for yaml files.
- * @kind problem
+ * @kind metric
  * @problem.severity recommendation
  * @id js/yaml-lib-test
- * @tags maintainability
+ * @tags summary
  *       statistical
  *       non-attributable
  * @precision high
@@ -36,8 +36,10 @@ query predicate yamlScalar(YamlScalar s, string style, string value) {
   style = s.getStyle() and value = s.getValue()
 }
 
-*/
 
 from yamlParseError any err
 //where err.getText().any()
 select err, "this should be fixed"
+*/
+
+query predicate yamlParseError(YamlParseError err) { any() }
