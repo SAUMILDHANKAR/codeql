@@ -51,5 +51,5 @@ select e, "this should be fixed"
 
 
 string yamlParseError(string e) {
-  e = any(getMessage)
+  e = getMessage().any(result)
 }
