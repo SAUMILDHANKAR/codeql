@@ -1,13 +1,14 @@
 /**
- * @name yaml library test
- * @description best practice for yaml files.
- * @kind metric
+/**
+ * @name FUTUREBUG comment
+ * @description A comment that contains 'FUTUREBUG' or similar keywords may indicate code that is incomplete or
+ *              broken, or it may highlight an ambiguity in the software's specification.
+ * @kind problem
  * @problem.severity recommendation
- * @id js/yaml-lib-test
- * @tags summary
- *       statistical
- *       non-attributable
- * @precision high
+ * @id js/futurebug-comment
+ * @tags maintainability
+ *       external/cwe/cwe-546
+ * @precision medium
  */
 
 import javascript
