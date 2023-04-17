@@ -70,7 +70,10 @@ select err, "this should be fixed"
 from Comment c
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
-*/
 
 from Comment c
 select c, c.getText()
+*/
+
+from YamlParseError c
+select c, c
