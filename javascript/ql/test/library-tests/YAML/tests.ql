@@ -76,4 +76,4 @@ select c, c.getText()
 */
 
 from YamlParseError c
-select c, c
+select c, c.getMessage()
