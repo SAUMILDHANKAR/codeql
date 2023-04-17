@@ -14,10 +14,10 @@ import javascript
 //import semmle.javascript.PrintAst
 import semmle.javascript.YAML
 
-
+/**
 query predicate yamlParseError(YamlParseError err) { any() }
 
-/**
+
 query predicate anchors(YamlNode n, string anchor) { n.getAnchor() = anchor }
 
 query predicate eval(YamlNode n, YamlValue eval) {
@@ -62,8 +62,13 @@ int getSuccessor(int i) {
   result = i + 1 and
   i in [1 .. 9]
 }
-*/
+
 
 from string err
 //where err.getText().any()
 select err, "this should be fixed"
+*/
+
+from Comment c
+where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
+select c, "FUTUREBUG comments should be addressed."
