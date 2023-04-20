@@ -90,7 +90,20 @@ select n, n.getTag()
 //Error: Code Scanning could not process the submitted SARIF file:
 from YamlScalar s
 select s, s.getValue()
-*/
 
+//Error: Code Scanning could not process the submitted SARIF file:
 from YamlScalar s
 select s, s.getStyle()
+
+
+query predicate eval(YamlNode n, YamlValue eval) {
+  not n.eval() = n and
+  eval = n.eval()
+}
+
+query predicate anchors(YamlNode n, string anchor) { n.getAnchor() = anchor }
+*/
+
+from YamlNode n, string anchor
+where n.getAnchor() = anchor
+select n, n.getAnchor()
