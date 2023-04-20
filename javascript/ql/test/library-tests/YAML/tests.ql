@@ -73,7 +73,10 @@ select c, "FUTUREBUG comments should be addressed."
 
 from Comment c
 select c, c.getText()
-*/
 
+
+//following code gave one error
 from YamlParseError c
 select c, c.getMessage()
+*/
+
