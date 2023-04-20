@@ -88,5 +88,5 @@ from YamlNode n
 select n, n.getTag()
 */
 
-from YamlParseError c
-select c, c.getMessage()
+from YamlScalar s
+select s, s.getValue()
