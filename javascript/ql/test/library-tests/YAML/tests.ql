@@ -80,8 +80,13 @@ from YamlParseError c
 select c, c.getMessage()
 
 
-query predicate yamlNode(YamlNode n, string tag) { tag = n.getTag() }
-*/
+// query predicate yamlNode(YamlNode n, string tag) { tag = n.getTag() }
 
+
+//following query gave 5000 notifications
 from YamlNode n
 select n, n.getTag()
+*/
+
+from YamlParseError c
+select c, c.getMessage()
