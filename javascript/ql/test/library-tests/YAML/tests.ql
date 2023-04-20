@@ -102,8 +102,13 @@ query predicate eval(YamlNode n, YamlValue eval) {
 }
 
 query predicate anchors(YamlNode n, string anchor) { n.getAnchor() = anchor }
-*/
 
+
+// this generated one alert for merge1.yaml file
 from YamlNode n, string anchor
 where n.getAnchor() = anchor
 select n, n.getAnchor()
+*/
+
+from YamlParseError c
+select c, c.getMessage()
