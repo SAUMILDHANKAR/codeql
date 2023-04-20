@@ -86,7 +86,11 @@ select c, c.getMessage()
 //following query gave 5000 notifications
 from YamlNode n
 select n, n.getTag()
+
+//Error: Code Scanning could not process the submitted SARIF file:
+from YamlScalar s
+select s, s.getValue()
 */
 
 from YamlScalar s
-select s, s.getValue()
+select s, s.getStyle()
