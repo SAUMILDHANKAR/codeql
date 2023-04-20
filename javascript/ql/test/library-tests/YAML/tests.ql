@@ -78,5 +78,10 @@ select c, c.getText()
 //following code gave one error
 from YamlParseError c
 select c, c.getMessage()
+
+
+query predicate yamlNode(YamlNode n, string tag) { tag = n.getTag() }
 */
 
+from YamlNode n
+select n, n.getTag()
