@@ -15,10 +15,13 @@ import javascript
 import semmle.javascript.YAML
 
 from Comment c
+// below line gives 2 errors
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*(\{\{\D.+\}\}).*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*(\{\{\D.+ \}\}).")
-where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{OK\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
+// below line gives one error
+//where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{OK\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
+where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{\D\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 
 /**
