@@ -21,7 +21,7 @@ from Comment c
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*(\{\{\D.+ \}\}).")
 // below line gives one error
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{OK\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
-where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{\D\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
+where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{\\D\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 
 /**
