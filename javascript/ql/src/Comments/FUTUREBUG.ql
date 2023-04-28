@@ -17,7 +17,7 @@ import semmle.javascript.YAML
 from Comment c
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*(\{\{\D.+\}\}).*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
-where c.getText().regexpMatch("(?s).*FIXME.*|.*(\{\{\D.+\}\}).")
+where c.getText().regexpMatch("(?s).*FIXME.*|.*(\{\{\D.+ \}\}).")
 select c, "FUTUREBUG comments should be addressed."
 
 /**
