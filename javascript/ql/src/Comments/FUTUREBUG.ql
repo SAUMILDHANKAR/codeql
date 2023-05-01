@@ -14,6 +14,14 @@
 import javascript
 import semmle.javascript.YAML
 
+from HTML::CommentNode c
+where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{\\D*\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
+select c, "HTML code comments should be addressed."
+
+/**
+import javascript
+import semmle.javascript.YAML
+
 from Comment c
 // below line gives 2 errors
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTUREBUG.*|.*(?<!=)\\s*XXX.*")
@@ -26,7 +34,7 @@ from Comment c
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{\\D*\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 
-/**
+
 import javascript
 
 class CommaToken extends PunctuatorToken {
