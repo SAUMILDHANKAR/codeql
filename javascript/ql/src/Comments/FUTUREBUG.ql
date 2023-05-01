@@ -31,6 +31,7 @@ from Comment c
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{OK\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
 //below line gives one error
 //where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{\\D\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
+// below line gives 3 errors
 where c.getText().regexpMatch("(?s).*FIXME.*|.*FUTURE\\{\\{\\D*\\}\\}BUG.*|.*(?<!=)\\s*XXX.*")
 select c, "FUTUREBUG comments should be addressed."
 
