@@ -1,0 +1,44 @@
+<!DOCTYPE qhelp PUBLIC
+  "-//Semmle//qhelp//EN"
+  "qhelp.dtd">
+<qhelp>
+<overview>
+<p>
+YAML node anchors have been identified.
+</p>
+
+</overview>
+<recommendation>
+
+<p>
+Address the problem if any.
+</p>
+
+</recommendation>
+<example>
+
+<p>
+Example to be included here
+</p>
+
+<!--  
+<sample src="examples/TodoComments.js" />
+-->
+  
+<p>
+Solutions or recommendations go here!
+</p>
+
+</example>
+<references>
+
+
+<li>
+<!--Approxion:
+    <a href="http://www.approxion.com/?p=39">TODO or not TODO</a>.-->
+  To be decided
+</li>
+
+
+</references>
+</qhelp>
