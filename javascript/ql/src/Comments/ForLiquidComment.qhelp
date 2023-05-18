@@ -1,0 +1,46 @@
+<!DOCTYPE qhelp PUBLIC
+  "-//Semmle//qhelp//EN"
+  "qhelp.dtd">
+<qhelp>
+<overview>
+<p>
+A comment that includes the liquid syntax ```{{ }}``` 
+often indicates code that is incomplete or broken, or highlights ambiguities in the
+software's specification.
+</p>
+
+</overview>
+<recommendation>
+
+<p>
+Address the problem indicated by the comment.
+</p>
+
+</recommendation>
+<example>
+
+<p>
+Add example here!
+</p>
+
+<!--  
+<sample src="examples/TodoComments.js" />
+-->
+
+<p>
+Recommendation or suggestions would go here!
+</p>
+
+</example>
+<references>
+
+
+<li>
+<!--Approxion:
+    <a href="http://www.approxion.com/?p=39">TODO or not TODO</a>.-->
+  To be decided
+</li>
+
+
+</references>
+</qhelp>
