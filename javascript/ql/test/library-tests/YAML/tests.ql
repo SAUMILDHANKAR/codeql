@@ -1,12 +1,10 @@
 /**
- * @name FUTUREBUG comment
- * @description A comment that contains 'FUTUREBUG' or similar keywords may indicate code that is incomplete or
- *              broken, or it may highlight an ambiguity in the software's specification.
+ * @name YAML parse error
+ * @description A note is generated whenever there is a parsing error in a yaml file
  * @kind problem
  * @problem.severity recommendation
- * @id js/futurebug-comment
+ * @id js/yaml-parse-error
  * @tags maintainability
- *       external/cwe/cwe-546
  * @precision medium
  */
 
